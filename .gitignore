@@ -1,0 +1,27 @@
+# Build artifacts
+Build/
+Bin/
+*.o
+*.so
+
+# Generated files
+Include/Enclave_t.h
+Include/Enclave_u.h
+
+# State files
+enclave_state.bin
+old_state_*.bin
+.enclave_pid
+
+# Keys (security)
+Keys/*.pem
+
+# Logs
+*.log
+/tmp/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~

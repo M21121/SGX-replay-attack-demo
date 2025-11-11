@@ -1,0 +1,17 @@
+enclave {
+    trusted {
+        public void ecall_initialize_enclave();
+        public void ecall_set_balance(int amount);
+        public void ecall_get_account_info([out, size=name_len] char* name, size_t name_len, 
+                                           [out] int* balance, [out] uint32_t* tx_count);
+        public void ecall_deposit(int amount);
+        public void ecall_withdraw(int amount);
+        public void ecall_save_state();
+        public int ecall_load_state([in, size=data_len] const uint8_t* encrypted_state, size_t data_len);
+    };
+
+    untrusted {
+        void ocall_save_encrypted_state([in, size=data_len] const uint8_t* data, size_t data_len);
+        size_t ocall_load_encrypted_state([out, size=max_len] uint8_t* buffer, size_t max_len);
+    };
+};
