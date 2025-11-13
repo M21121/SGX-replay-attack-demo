@@ -109,3 +109,8 @@ make clean-all  # Remove build artifacts and keys
 - **Demo Purpose Only**: Uses hardcoded seal key for demonstration
 - **SGX Mode**: Defaults to hardware mode (HW), use `SGX_MODE=SIM` for simulation
 - **Debug Build**: Enabled by default (`SGX_DEBUG=1`)
+
+- ## AI Assistance Disclosure
+
+This codebase was developed with assistance from large language models (LLMs) including Claude and Gemini. These tools were used to assist with code generation, debugging, and optimization during development. All code in this repository has been carefully reviewed, tested, and verified by me. I take full responsibility for its correctness, functionality, and adherence to the project requirements.
+
